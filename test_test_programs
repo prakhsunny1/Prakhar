@@ -1,0 +1,30 @@
+"""
+Description: unittest script for test_programs
+"""
+
+from test_programs import char_length_occurence , program1, program2
+
+sentence = "This is a very crazy long sentence and I want to educate everyone in this whole crazy world"
+
+class ModuleTests(unittest.TestCase):
+
+    def test_char_length_occurence (self):
+        (max_number_of_occurence, character_occurence, lengh_of_word) = char_length_occurence("z", list(sentence.split(" ")))
+        print (max_number_of_occurence)
+        print (character_occurence)
+        print (lengh_of_word)
+
+    def test_main(self):
+        self.fail()
+
+    def test_program1(self):
+        program1(sentence, "z")
+        program1(sentence, "I")
+        program1(sentence, "e")
+        program1(sentence, "123")
+        
+
+    def test_program2(self):
+        program2(156)
+        program2(88)
+
